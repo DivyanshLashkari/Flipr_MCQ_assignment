@@ -53,18 +53,18 @@ function TopicSelectionPage() {
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', maxWidth: '800px', margin: '0 auto' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', maxWidth: '800px', margin: '0 auto', }}>
       <h1 style={{ fontSize: '2em', marginTop: '2rem' }}>Topic Selection Page</h1>
-      <input type="search" value={searchTerm} onChange={handleSearch} placeholder="Search topics" style={{ marginTop: '1rem', padding: '0.5rem', borderRadius: '5px' }}/>
+      <input type="search" value={searchTerm} onChange={handleSearch} placeholder="Search topics" style={{ marginTop: '1rem', padding: '0.5rem', borderRadius: '5px' }} />
       <select value={sortedTopics} onChange={handleSort} style={{ marginTop: '1rem', padding: '0.5rem', borderRadius: '5px' }}>
         <option value="alphabetical">Alphabetical</option>
       </select>
       <ul style={{ listStyle: 'none', margin: '0', padding: '0', display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
         {sortedTopics.map(topic => (
-          <li key={topic.topic} style={{ margin: '1rem', padding: '1rem', borderRadius: '5px', backgroundColor: 'rgba(255, 255, 255, 0.9)', width: '200px' }}>
+          <li key={topic.topic} style={{ margin: '1rem', padding: '1rem', borderRadius: '5px', backgroundColor: 'rgba(255, 255, 255, 0.9)', width: '200px', backgroundColor: 'grey', borderRadius: 10 }}>
             <h2 style={{ margin: '0', fontSize: '1.5em', fontWeight: 'bold' }}>{topic.topic}</h2>
-            <p style={{ margin: '0', fontSize: '1em' }}>Easy: {topic.easy}, Medium: {topic.medium}, Hard: {topic.hard}</p>
-            <button style={{ marginTop: '1rem', padding: '0.5rem', borderRadius: '5px', backgroundColor: '#007bff', color: 'white', border: 'none', cursor: 'pointer' }} onClick={() => handleTopicSelect(topic)}>Select</button>
+            <p style={{ margin: '0', fontSize: '1em', }}>Easy: {topic.easy}, Medium: {topic.medium}, Hard: {topic.hard}</p>
+            <button style={{ marginTop: '1rem', padding: '0.5rem', borderRadius: '5px', backgroundColor: 'black', color: 'white', border: 'none', cursor: 'pointer',}} onClick={() => handleTopicSelect(topic)}>Select</button>
           </li>
         ))}
       </ul>

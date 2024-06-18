@@ -40,7 +40,7 @@ const BasicDetailsPage = () => {
     }
   };
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center',}}>
       <h1 style={{ fontSize: '2em', marginTop: '2rem' }}>Flipr MCQ Questions</h1>
       <form
         onSubmit={handleSubmit}
