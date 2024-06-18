@@ -48,7 +48,6 @@ function TopicSelectionPage() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Send selected topic and difficulty level to API or backend here
     console.log('Selected topic:', selectedTopic);
     console.log('Difficulty level:', difficultyLevel);
   };
@@ -59,7 +58,6 @@ function TopicSelectionPage() {
       <input type="search" value={searchTerm} onChange={handleSearch} placeholder="Search topics" style={{ marginTop: '1rem', padding: '0.5rem', borderRadius: '5px' }}/>
       <select value={sortedTopics} onChange={handleSort} style={{ marginTop: '1rem', padding: '0.5rem', borderRadius: '5px' }}>
         <option value="alphabetical">Alphabetical</option>
-        {/* Add more sort options here */}
       </select>
       <ul style={{ listStyle: 'none', margin: '0', padding: '0', display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
         {sortedTopics.map(topic => (
